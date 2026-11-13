@@ -17,7 +17,7 @@ A GPU-accelerated **Direct Volume Rendering (DVR)** desktop application built wi
 
 | Threshold Filtering & Scalar HUD (`-13.5 °C`) | Close-Up of the Hurricane Vortex Structure |
 | :---: | :---: |
-| ![Threshold Filtering and Scalar HUD](image6.png) | ![Hurricane Vortex Detail](image8.jpg) |
+| ![Threshold Filtering and Scalar HUD](image6.png) | ![Hurricane Vortex Detail](image8.png) |
 
 ## Architecture
 
