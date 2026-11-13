@@ -2,16 +2,22 @@
 
 A GPU-accelerated **Direct Volume Rendering (DVR)** desktop application built with Python, PyOpenGL, GLSL, and PySide6 (Qt). The tool visualizes 3D atmospheric temperature fields from a high-resolution Weather Research and Forecasting (WRF) simulation of **Hurricane Isabel** (2003).
 
-![Hurricane Isabel 3D Volume Rendering](screenshot.png)
-*(Tip: Replace `screenshot.png` with an actual capture of the running application.)*
+![3D Isometric Volume Rendering of Hurricane Isabel](image3.png)
+![Temperature Color Legend](image4.png)
 
 ## Key Features
 
-* **GPU Raymarching Engine:** Custom OpenGL 3.3 Core vertex and fragment shaders (`GLSL`) performing raymarching across a `sampler3D` volume texture with front-to-back alpha compositing and **early ray termination** for real-time performance.
-* **Custom RGBA Transfer Function:** Piecewise linear color and opacity mapping transitioning from cold (blue) to warm/hot (yellow, orange, red) zones to highlight thermodynamic structures of the hurricane.
+* **GPU Raymarching Engine:** Custom OpenGL 3.3 Core vertex and fragment shaders (`GLSL`) performing raymarching across a `sampler3D` volume texture with front-to-back alpha compositing and **early ray termination** for real-time interaction.
+* **Custom RGBA Transfer Function:** Piecewise linear color and opacity mapping transitioning from cold upper-atmosphere layers (blue) to warm surface layers (yellow, orange, red) to highlight thermodynamic structures of the hurricane.
 * **Interactive Threshold Filtering:** A dedicated PySide6 control panel with synchronized sliders allowing real-time filtering of minimum and maximum temperature thresholds (in °C).
 * **Real-Time Scalar Inspection HUD:** Performs CPU ray-box intersection and raycasting on mouse hover to back-transform normalized voxel values and display exact local temperatures (°C) in a floating overlay.
 * **Full 3D Camera Navigation:** Smooth spherical orbiting, view panning, zooming, and instant view reset.
+
+## Visual Showcase
+
+| Threshold Filtering & Scalar HUD (`-13.5 °C`) | Close-Up of the Hurricane Vortex Structure |
+| :---: | :---: |
+| ![Threshold Filtering and Scalar HUD](image6.png) | ![Hurricane Vortex Detail](image8.jpg) |
 
 ## Architecture
 
